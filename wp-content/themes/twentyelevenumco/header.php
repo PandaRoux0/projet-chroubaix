@@ -69,7 +69,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="<?php echo get_stylesheet_directory_uri() ?>/contact-collapse.js" type="text/javascript"></script>
 <script src="<?php echo get_stylesheet_directory_uri() ?>/description-collapse.js" type="text/javascript"></script>
-<script src="<?php echo get_stylesheet_directory_uri() ?>/navbar-mobile.js" type="text/javascript"></script>
+<script src="<?php echo get_stylesheet_directory_uri() ?>/mobile.js" type="text/javascript"></script>
 </head>
 
 <body <?php body_class(); ?>>
@@ -83,7 +83,10 @@
 					<img src="<?php echo get_stylesheet_directory_uri() ?>/img/icon-navbar.png" alt="Show" />
 				</div>
 					<div id="popout">
-						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+						<?php wp_nav_menu( array( 'menu_class' => 'nav-menu' ) ); ?>
+					</div>
+					<div id="barre-principale">
+						<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 					</div>
 
 				<!--Partie coordonnées de l'hopital-->
@@ -99,12 +102,12 @@
 				</div>	
 					
 	</nav><!-- #access -->
-		<!--Titre principale-->
+		<!--Titre principal-->
 		<div id="titre-container">
 			<h1 id="site-title" class="entry-title"><?php bloginfo('name')?></h1>
 		</div>
 			
-				<!--Fin titre principale-->
+				<!--Fin titre principal-->
 			<?php
 				// Check to see if the header image has been removed
 				$header_image = get_header_image();

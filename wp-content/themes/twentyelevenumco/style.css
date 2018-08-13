@@ -86,10 +86,13 @@ h5{
 /*
 *Menu barre de navigation
 */
+#popout{
+    display: none;
+}
 
 #access{
     position: fixed;
-    background: #8BB73E;
+    background: rgb(139, 183, 62);
     border-bottom: #FFFFFF 1px solid;
     box-shadow: 0px 4px 40px rgba(0,0,0,0.50);
     z-index: 1;
@@ -175,7 +178,7 @@ h5{
 
 
 /*
-* Titre principale
+* Titre principal
 */
 #titre-container{
     display: flex;
@@ -204,7 +207,7 @@ h5{
 
 
 /*
-*Fin Titre principale
+*Fin Titre principal
 */
 
 
@@ -233,7 +236,7 @@ h5{
 }
 
 #qui-container li{
-    list-style-image: url('http://localhost/wordpress/wp-includes/images/checked.png');
+    list-style-image: url('http://localhost/wordpress/wp-content/themes/twentyelevenumco/img/checked.png');
     padding: 10px 10px;
 }
 
@@ -285,10 +288,6 @@ h5{
 }
 
 /* Partie : "Charte de nos valeurs" */
-
-#charte-container{
-    text-align: justify;
-}
 #charte-container ul{
     list-style-type: disc;
 }
@@ -353,7 +352,7 @@ h5{
 
 /*-------------------------------------------------Page "article"--------------------------------------------------------*/
 /*
-* Conteneur d'un article 
+* Conteneur d'un article    ( composé de trois éléments --> Titre , image et texte )
 */
 .container-article{
     display: flex;
@@ -447,6 +446,14 @@ h5{
 
 
 
+
+
+
+
+
+
+
+
 /*------------------------------------------------Media Queries------------------------------------------*/
 /* Quand l'écran descend à 1640px de large*/
 @media screen and (max-width: 1640px){
@@ -465,9 +472,7 @@ h5{
        }
    }
    
-   /*
-   *   Contact (téléphone + adresse) -> Barre de navigation 
-   */
+
    @media screen and (min-width: 769px) { 
        #toggle {
            display:none;
@@ -476,38 +481,63 @@ h5{
    } 
     
    @media screen and (max-width: 768px) {
+
+        /*
+        * Les titres 
+        */
+
         h2{
-            font-size: 28px;
+            font-size: 20px;
+            margin-bottom: 10px;
         }
+
+        .singular .entry-title{
+            line-height: 20px;
+            font-size: 19px;
+        }
+        .entry-content h3{
+            font-size: 20px;
+            line-height: 1em; 
+        }
+        /*
+        * Image du header
+        */
+
         #branding #img_header{
             height: 100%;
             width: 100%;
             padding:0;
         }
+        /*
+        *  Barre de navigation
+        */
         #container-contacter{
             position: absolute;
             left: 0;
             right: auto;
         }
-   
-       #popout {
+        
+       #barre-principale{
+           display: none;
+       }
+
+       #popout {    /* contient la barre de navigation mobile */
            position: fixed;
            height: 100%;
            width: 250px;
-           background: rgb(25, 25, 25);
-           background: rgba(25, 25, 25, .9);
+           background: rgba(139, 183, 62, .9);
            color: white;
            top: 0;
-           left: -130px;
+           left: -90px;
            overflow:auto;
        }
     
     
-       #toggle {
+       #toggle { /* Icon pour la barre de navigation mobile */
            float: right;
            position: fixed;
-           top: 60px;
-           right: 45px;
+           top: 10px;
+           right: 5px;
            width: 28px;
            height: 24px;     
        }
@@ -519,7 +549,7 @@ h5{
        }
     
        .nav-menu li:hover { 
-           background:#CCC;
+           color: #000000;
        }
     
        .nav-menu li a { 
@@ -528,8 +558,36 @@ h5{
            width:100%;
        }
    
+       /*
+       *    Titre du site
+       */ 
+
        #site-title{
            line-height: 33px;
            font-size: 28px;
        }
+
+       /*
+       *       Page article
+       */
+       .container-article h3:nth-child(1){
+           font-size: 18px;
+       }
+       .container-article p:nth-child(3){
+           width: 100%;
+       }
+       .container-article img:nth-child(2){
+            margin: 25px 0;
+        }
+
+
+        .container-article-inverse h3:nth-child(1){
+            font-size: 18px;
+        }
+       .container-article-inverse p:nth-child(3){
+             width: 100%;
+        }
+        .container-article-inverse img:nth-child(2){
+             margin: 25px 0;
+        }
    } 
