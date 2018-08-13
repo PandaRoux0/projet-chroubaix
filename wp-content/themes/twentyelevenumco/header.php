@@ -74,13 +74,12 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed">
+	<header id="branding" role="banner">
 	<!--Barre de navigation-->
 	<nav id="access" role="navigation">
 				<img id="logo" src="<?php echo get_stylesheet_directory_uri() ?>/img/logo_chroubaix.png" alt="logo" heigth="38px" width="144px">
 				<?php /* Our navigation menu. If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assigned to the primary location is the one used. If one isn't assigned, the menu with the lowest ID is used. */ ?>
-				<div id="toggle">
-					<img src="<?php echo get_stylesheet_directory_uri() ?>/img/icon-navbar.png" alt="Show" />
-				</div>
+				
 					<div id="popout">
 						<?php wp_nav_menu( array( 'menu_class' => 'nav-menu' ) ); ?>
 					</div>
@@ -89,22 +88,27 @@
 					</div>
 
 				<!--Partie coordonnées de l'hopital-->
-				<div id="container-contacter">
-					<div class="contacter">
+				<div id="container-contact">
+					<div class="contact">
 							<img id="icon-telephone" src="<?php echo get_stylesheet_directory_uri() ?>/img/logo-phone.png"/>
 							<p id="text-telephone">Tél: 03.20.99.30.40</p>
 					</div>
-					<div class="contacter">
+					<div class="contact">
 							<img id="icon-adresse" src="<?php echo get_stylesheet_directory_uri() ?>/img/logo-position.png"/>
 							<p id="text-adresse">CETRADIMN</br> 26 boulevard Lacordaire, 59100 Roubaix</p>	
 					</div>
 				</div>	
 					
 	</nav><!-- #access -->
-	<header id="branding" role="banner">
 		<!--Titre principal-->
 		<div id="titre-container">
 			<h1 id="site-title" class="entry-title"><?php bloginfo('name')?></h1>
+		</div>
+
+		<div id="barre-mobile" style="height:40px;">
+			<div id="toggle">
+					<img src="<?php echo get_stylesheet_directory_uri() ?>/img/icon-navbar.png" alt="Show" />
+			</div>
 		</div>
 			
 				<!--Fin titre principal-->

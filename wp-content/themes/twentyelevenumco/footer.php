@@ -36,10 +36,10 @@
 					<li><a href="http://localhost/wordpress/liens-utiles/">Liens utiles</a></li>
 				</ul>
 				<ul id="lien-site">
+					<li><a href="">Site du ch-Roubaix</a></li>
 					<li><a href="">Site de la cancérologie</a></li>
 					<li><a href="">Site de la néonatologie</a></li>
 					<li><a href="">Site de l'IFSI / l'IFAS</a></li>
-					<li><a href="">Site du ch-Roubaix</a></li>
 				</ul>
 			</div>
 	</footer><!-- #colophon -->

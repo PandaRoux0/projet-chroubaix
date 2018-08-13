@@ -88,8 +88,7 @@ h5{
 }
 
 #access{
-    position: sticky;
-    top: 0;
+    position: fixed;
     background: rgb(139, 183, 62);
     border-bottom: #FFFFFF 1px solid;
     box-shadow: 0px 4px 40px rgba(0,0,0,0.50);
@@ -138,7 +137,7 @@ h5{
 /*Adresse et téléphone*/
 
 
-#container-contacter{
+#container-contact{
     position: absolute;
     right: 3%;
     display: flex;
@@ -147,33 +146,33 @@ h5{
     width: auto;
     height: 40px;
 }
-.contacter{
+.contact{
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     height: 40px;
 }
-.contacter #text-adresse{
+.contact #text-adresse{
     width: 300px;
 }
 
-.contacter #text-telephone{
+.contact #text-telephone{
     width: 110px
 }
 
-.contacter p{
+.contact p{
     width: auto;
     padding-left: 10px;
     color: #ffffff;
     font-size: 12px;
 }
 
-.contacter img{
+.contact img{
     border-radius: 6px;
     width: 30px !important;
     height: 30px !important;
 }
-.contacter img:hover{
+.contact img:hover{
     cursor: pointer;
 }
 
@@ -489,7 +488,7 @@ h5{
 
 
         /*
-        * Attributs globals
+        * Attributs globaux
         */
 
         .singular .entry-content{
@@ -530,17 +529,27 @@ h5{
         /*
         *  Barre de navigation
         */
-        #container-contacter{
+        #access #logo{   /* Logo du site */
             position: absolute;
-            left: 0;
-            right: auto;
+            top: 5%;
+            left: 14%;
+            width: 125px;
+        }
+
+        #barre-mobile{ /* La barre de navigation mobile */
+            height: 35px;
+            background: #8BB73E;
+        }
+
+        #container-contact{
+            display: none;
         }
         
        #barre-principale{
            display: none;
        }
 
-       #popout {    /* contient la barre de navigation mobile */
+       #popout {    /* contient le menu mobile */
            position: fixed;
            height: 100%;
            width: 250px;
