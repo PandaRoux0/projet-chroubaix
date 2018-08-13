@@ -14,6 +14,7 @@ body{
     background: none;
     font-family: 'Exo', sans-serif;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 p{
     margin-bottom: 0;
@@ -66,22 +67,18 @@ h5{
 */
 
 #branding{
+    z-index: 3;
     border-top: 0;
 }
 
-#branding #img_header{
-    padding: 1.8% 0 0 0;
-    width: 100vw;
-    height: 100%;
-    z-index: -1;
-}
 
-#branding #logo{
-    position: absolute;
-    top: 5%;
-    left: 14%;
-    width: 135px;
-}
+#header_img {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+ }
+
+
 
 /*
 *Menu barre de navigation
@@ -91,12 +88,13 @@ h5{
 }
 
 #access{
-    position: fixed;
+    position: sticky;
+    top: 0;
     background: rgb(139, 183, 62);
     border-bottom: #FFFFFF 1px solid;
     box-shadow: 0px 4px 40px rgba(0,0,0,0.50);
-    z-index: 1;
-
+    z-index: 10;
+    margin: auto;
 }
 
 #access ul{
@@ -122,6 +120,13 @@ h5{
 
 #access div{
     margin: 0 0 0 12.6%;
+}
+
+#access #logo{
+    position: absolute;
+    top: 5%;
+    left: 14%;
+    width: 135px;
 }
 
 
@@ -249,16 +254,14 @@ h5{
 /* Partie : "Prise en charge pluridisciplinaire" */
 
 
-#suivie-container{
+#suivi-container{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.suivie-description{
 
-}
 
-.suivie-description img{
+.suivi-description img{
     border: none;
     border-radius: 100px;
     display: flex;
@@ -268,16 +271,16 @@ h5{
     -webkit-transition: 0.8s;
 }
 
-.suivie-description img:hover{
+.suivi-description img:hover{
     cursor: pointer;
     opacity: 0.6;
 }
 
-.suivie-description h6{
+.suivi-description h6{
     text-align: center;
 }
 
-.suivie-description #suivi-paragraphe{
+.suivi-description #suivi-paragraphe{
     width: 112px;
     font-size: 10px;
     background: #FFFFFF;
@@ -472,7 +475,9 @@ h5{
        }
    }
    
-
+/*
+*           Partie responsive pour mobile
+*/
    @media screen and (min-width: 769px) { 
        #toggle {
            display:none;
@@ -482,13 +487,22 @@ h5{
     
    @media screen and (max-width: 768px) {
 
+
+        /*
+        * Attributs globals
+        */
+
+        .singular .entry-content{
+            width: 100%;
+        }
+
         /*
         * Les titres 
         */
 
-        h2{
+        .entry-content h2{
             font-size: 20px;
-            margin-bottom: 10px;
+            margin-bottom: 40px;
         }
 
         .singular .entry-title{
@@ -498,6 +512,11 @@ h5{
         .entry-content h3{
             font-size: 20px;
             line-height: 1em; 
+        }
+
+        h4{
+            font-size: 20px;
+            font-weight: 700;
         }
         /*
         * Image du header
@@ -589,5 +608,64 @@ h5{
         }
         .container-article-inverse img:nth-child(2){
              margin: 25px 0;
+        }
+
+        /*
+        *       Page "chirurgie reconstructrice"
+        */
+
+        .container-type-operation{
+            height: auto;
+            margin-bottom: 50px;
+        }
+        .container-type-operation p{
+            margin-bottom: 25px;
+        }
+
+        /*
+        *       Page "équipe"
+        */
+
+        .container-equipe{
+            padding: 50px 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .container-equipe p{
+            font-size: 13px;
+            margin-bottom: 40px;
+        }
+
+        /*
+        *       Footer
+        */
+
+        #site-generator{
+            flex-direction: column;
+        }
+        #site-generator ul{
+            flex-direction: column;
+            margin: 0;
+            width: auto;
+        }
+        
+        #suivez-nous {
+            padding: 30px 0;
+            border-right: none;
+            border-bottom: #FFFFFF 1px solid;
+        }
+        #site-generator #lien-information{
+            padding: 30px 0;
+        }
+        #site-generator #lien-information li{
+            height: auto;
+            padding: 0;
+        }
+
+        #site-generator #lien-site{
+            padding: 30px 0;
+            border-left: none;
+            border-top: #FFFFFF 1px solid;
         }
    } 

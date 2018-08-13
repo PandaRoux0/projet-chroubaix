@@ -67,14 +67,13 @@
 ?>
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="<?php echo get_stylesheet_directory_uri() ?>/contact-collapse.js" type="text/javascript"></script>
-<script src="<?php echo get_stylesheet_directory_uri() ?>/description-collapse.js" type="text/javascript"></script>
-<script src="<?php echo get_stylesheet_directory_uri() ?>/mobile.js" type="text/javascript"></script>
+<script src="<?php echo get_stylesheet_directory_uri() ?>/js/contact-collapse.js" type="text/javascript"></script>
+<script src="<?php echo get_stylesheet_directory_uri() ?>/js/description-collapse.js" type="text/javascript"></script>
+<script src="<?php echo get_stylesheet_directory_uri() ?>/js/mobile-navbar-collapse.js" type="text/javascript"></script>
 </head>
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed">
-	<header id="branding" role="banner">
 	<!--Barre de navigation-->
 	<nav id="access" role="navigation">
 				<img id="logo" src="<?php echo get_stylesheet_directory_uri() ?>/img/logo_chroubaix.png" alt="logo" heigth="38px" width="144px">
@@ -102,6 +101,7 @@
 				</div>	
 					
 	</nav><!-- #access -->
+	<header id="branding" role="banner">
 		<!--Titre principal-->
 		<div id="titre-container">
 			<h1 id="site-title" class="entry-title"><?php bloginfo('name')?></h1>
@@ -123,7 +123,7 @@
 						$header_image_width = HEADER_IMAGE_WIDTH;
 					}
 					?>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+			<!-- <a href="<?php echo esc_url( home_url( '/' ) ); ?>"> -->
 					
 				
 				<?php
@@ -146,9 +146,10 @@
 							$header_image_height = HEADER_IMAGE_HEIGHT;
 						}
 						?>
-					<img id="img_header" src="<?php header_image(); ?>" width="<?php echo $header_image_width; ?>" height="<?php echo $header_image_height; ?>" alt="" />
+						<div id="header_img" style="background:url(<?php header_image(); ?>) no-repeat top/cover;"></div>
+					<!-- <img id="img_header" src="<?php header_image(); ?>" width="<?php echo $header_image_width; ?>" height="<?php echo $header_image_height; ?>" alt="" /> -->
 				<?php endif; // end check for featured image or standard header ?>
-			</a>
+			<!-- </a> -->
 			<?php endif; // end check for removed header image ?>
 			
 			
