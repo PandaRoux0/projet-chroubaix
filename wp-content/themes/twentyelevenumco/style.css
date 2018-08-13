@@ -1,0 +1,535 @@
+/*
+Theme Name: TwentyElevenUmco
+Description: Theme enfant basé sur "Twenty Eleven"
+Author: Martin / Alexandre
+Author URI: www.martinwallet.fr
+Template: twentyeleven
+Version: 0.1.0
+*/
+@import url('https://fonts.googleapis.com/css?family=Exo');
+
+/*----------------------------------------------------Attributs global--------------------------------------------------------------*/
+body{
+    padding: 0;
+    background: none;
+    font-family: 'Exo', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+p{
+    margin-bottom: 0;
+}
+
+h2{
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    border-bottom: #D3D3D3 1px solid;
+    color: #8BB73E !important;
+}
+
+.entry-content h3{
+    font-size: 30px;
+}
+
+h4{
+    text-align: center;
+    font-size: 40px;
+    font-weight: lighter;
+    padding-bottom: 20px;
+}
+h5{
+    text-align: center;
+    font-size: 21px;
+    text-decoration-line: underline;
+    padding-bottom: 12px;
+}
+
+#page{
+    max-width: 100%;
+    margin: 0;
+}
+
+
+.singular .entry-title{
+    font-size: 45px;
+}
+.singular .entry-content{
+    width: 80%;
+}
+
+
+
+/*---------------------------------------------Header-------------------------------------------------------------*/
+
+/*
+*  Header global
+*/
+
+#branding{
+    border-top: 0;
+}
+
+#branding #img_header{
+    padding: 1.8% 0 0 0;
+    width: 100vw;
+    height: 100%;
+    z-index: -1;
+}
+
+#branding #logo{
+    position: absolute;
+    top: 5%;
+    left: 14%;
+    width: 135px;
+}
+
+/*
+*Menu barre de navigation
+*/
+
+#access{
+    position: fixed;
+    background: #8BB73E;
+    border-bottom: #FFFFFF 1px solid;
+    box-shadow: 0px 4px 40px rgba(0,0,0,0.50);
+    z-index: 1;
+
+}
+
+#access ul{
+    list-style: none;
+    margin: 0 21%;
+    font-size: 14px;
+}
+
+#access li a{
+    -webkit-transition: 0.4s; /* Safari */
+    transition: 0.4s;
+    list-style: none;
+    border-right: #D3D3D3 1px solid;
+}
+
+#access li:hover > a,
+#access ul ul :hover > a,
+#access a:focus {
+    color: black;
+    background: rgb(211,211,211,0);
+    
+}
+
+#access div{
+    margin: 0 0 0 12.6%;
+}
+
+
+#menu-menu-1 #menu-item-17 a{
+    border-right: none;
+}
+
+
+/*Adresse et téléphone*/
+
+
+#container-contacter{
+    position: absolute;
+    right: 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: auto;
+    height: 40px;
+}
+.contacter{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    height: 40px;
+}
+.contacter #text-adresse{
+    width: 300px;
+}
+
+.contacter #text-telephone{
+    width: 110px
+}
+
+.contacter p{
+    width: auto;
+    padding-left: 10px;
+    color: #ffffff;
+    font-size: 12px;
+}
+
+.contacter img{
+    border-radius: 6px;
+    width: 30px !important;
+    height: 30px !important;
+}
+.contacter img:hover{
+    cursor: pointer;
+}
+
+/*
+* Fin barre de navigation
+*/
+
+
+/*
+* Titre principale
+*/
+#titre-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left:0;
+    right:0;
+    margin: auto;
+    top: 29%;
+    width: 44%;
+    height: 50%;
+    background: rgb(211, 211, 211,0.48);
+}
+
+#site-title{
+    line-height: 70px;
+    margin-right: 0;
+    padding-top: 0;
+    font-weight: lighter;
+    font-size: 65px;
+    color: #FFFFFF;
+    text-align: center;
+    text-shadow: 0px 0px 45px rgba(0,0,0,1);
+}
+
+
+/*
+*Fin Titre principale
+*/
+
+
+/*----------------------------------------------Page "présentation"--------------------------------------------------------*/
+
+.container{
+    border-top: #D3D3D3 1px solid;
+    margin: 45px 0;
+    padding: 20px 0;
+}
+.container h1{
+    text-align: center;
+}
+
+
+.entry-header{
+    display: none;
+}
+
+
+/* Partie : "A qui s'adresse notre programme" */
+
+
+#qui{
+    border: none;
+}
+
+#qui-container li{
+    list-style-image: url('http://localhost/wordpress/wp-includes/images/checked.png');
+    padding: 10px 10px;
+}
+
+#qui-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/* Partie : "Prise en charge pluridisciplinaire" */
+
+
+#suivie-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.suivie-description{
+
+}
+
+.suivie-description img{
+    border: none;
+    border-radius: 100px;
+    display: flex;
+    margin: 0 auto;
+    opacity: 1;
+    transition: 0.8s;
+    -webkit-transition: 0.8s;
+}
+
+.suivie-description img:hover{
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.suivie-description h6{
+    text-align: center;
+}
+
+.suivie-description #suivi-paragraphe{
+    width: 112px;
+    font-size: 10px;
+    background: #FFFFFF;
+    box-shadow: 0 0 31px -4px rgba(0,0,0,0.50);
+    border-radius: 28px;
+    padding: 15px;
+
+}
+
+/* Partie : "Charte de nos valeurs" */
+
+#charte-container{
+    text-align: justify;
+}
+#charte-container ul{
+    list-style-type: disc;
+}
+
+.charte-list{
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+}
+
+
+/*---------------------------------------------Footer--------------------------------------------------------*/
+
+#site-generator{
+    display: flex;
+    font-size: 15px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #D3D3D3;
+    text-align: left;
+    padding: 20px 0 0 0;
+}
+
+#site-generator #lien-site{
+    border-left: #FFFFFF 1px solid;
+    padding: 0 0 0 140px;
+    width: 200px;
+    list-style-type: circle;
+}
+
+#site-generator #lien-information{
+    display: flex;
+    list-style: none;
+}
+
+#site-generator #lien-information li{
+    height: 20px;
+    padding: 0 15px 0 15px;
+}
+
+#suivez-nous{
+    padding: 0 140px 0 50px;
+    border-right: #FFFFFF 1px solid;
+}
+
+#suivez-nous h4{
+    color: black;
+    padding: 0 !important;
+    font-size: 34px;
+    font-weight: bold;
+}
+
+#suivez-nous img{
+    padding: 24px 8px 0 8px;
+    height: 50px;
+    width: 50px;
+}
+/*
+* Fin footer
+*/
+
+
+/*-------------------------------------------------Page "article"--------------------------------------------------------*/
+/*
+* Conteneur d'un article 
+*/
+.container-article{
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 0 100px 0;
+    height: auto;
+}
+
+.container-article h3:nth-child(1){
+    width: 100%;
+    font-size: 30px;
+    order: 1;
+}
+.container-article img:nth-child(2){
+    box-shadow: 0px 0px 39px  rgba(0,0,0,0.40);
+    margin-right: 20px;
+    order: 2;
+}
+.container-article p:nth-child(3){
+    width: 40%;
+    order: 3;
+}
+
+/*
+* Conteneur d'un article inversé
+*/
+
+.container-article-inverse{
+    display: flex;
+    flex-flow: row wrap-reverse;
+
+    margin: 0 0 100px 0;
+    height: auto;
+}
+
+.container-article-inverse h3:nth-child(1){
+    width: 100%;
+    font-size: 30px;
+    order: 3;
+}
+.container-article-inverse img:nth-child(2){
+    box-shadow: 0px 0px 39px  rgba(0,0,0,0.40);
+    align-self: flex-end;
+    margin-left: 20px;
+    order: 2;
+}
+.container-article-inverse p:nth-child(3){
+    width: 40%;
+    order: 1;
+}
+
+
+/*
+* Conteneur pour les images des différentes opérations de chirurgie reconstructrice
+*/
+
+.container-type-operation{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: column wrap;
+    width: auto;
+    height: 300px;
+}
+
+.container-type-operation p{
+    text-align: center;
+    width: 300px;
+}
+
+
+/*-----------------------------------------------------Page équipe-------------------------------------------*/
+
+.container-equipe{
+    height: 400px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    align-content: space-around;
+    border-bottom: #D3D3D3 1px solid;
+}
+
+.container-equipe img{
+    border-radius: 180px;
+}
+
+.container-equipe p{
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+
+
+/*------------------------------------------------Media Queries------------------------------------------*/
+/* Quand l'écran descend à 1640px de large*/
+@media screen and (max-width: 1640px){
+    /*
+       *   Barre de navigation
+       */
+       #access ul{
+           margin: 0 5%;
+       }
+       #branding #logo{
+           left: 4%;
+       }
+       #toggle img{
+           height: 13px;
+           width: 13px;
+       }
+   }
+   
+   /*
+   *   Contact (téléphone + adresse) -> Barre de navigation 
+   */
+   @media screen and (min-width: 769px) { 
+       #toggle {
+           display:none;
+       }
+    
+   } 
+    
+   @media screen and (max-width: 768px) {
+        h2{
+            font-size: 28px;
+        }
+        #branding #img_header{
+            height: 100%;
+            width: 100%;
+            padding:0;
+        }
+        #container-contacter{
+            position: absolute;
+            left: 0;
+            right: auto;
+        }
+   
+       #popout {
+           position: fixed;
+           height: 100%;
+           width: 250px;
+           background: rgb(25, 25, 25);
+           background: rgba(25, 25, 25, .9);
+           color: white;
+           top: 0;
+           left: -130px;
+           overflow:auto;
+       }
+    
+    
+       #toggle {
+           float: right;
+           position: fixed;
+           top: 60px;
+           right: 45px;
+           width: 28px;
+           height: 24px;     
+       }
+    
+       .nav-menu li { 
+        border-bottom:1px solid #eee; 
+           padding:20px;
+           width:100%;
+       }
+    
+       .nav-menu li:hover { 
+           background:#CCC;
+       }
+    
+       .nav-menu li a { 
+           color:#FFF;
+           text-decoration:none;
+           width:100%;
+       }
+   
+       #site-title{
+           line-height: 33px;
+           font-size: 28px;
+       }
+   } 
