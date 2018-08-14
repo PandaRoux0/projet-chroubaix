@@ -104,11 +104,9 @@
 		<div id="titre-container">
 			<h1 id="site-title" class="entry-title"><?php bloginfo('name')?></h1>
 		</div>
-
-		<div id="barre-mobile" style="height:40px;">
-			<div id="toggle">
+		<div id="barre-tablette" style="height: 40px;"></div>
+		<div id="toggle">
 					<img src="<?php echo get_stylesheet_directory_uri() ?>/img/icon-navbar-mobile.png" alt="Show" />
-			</div>
 		</div>
 			
 				<!--Fin titre principal-->
