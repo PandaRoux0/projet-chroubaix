@@ -43,6 +43,11 @@
 				</ul>
 			</div>
 	</footer><!-- #colophon -->
+	<div id="cookies">
+		<p>Nous diffusons des cookies afin d'analyser le trafic sur ce site. Les informations concernant l'utilisation que vous faites de notre site nous sont transmises dans cette optique</p>
+		<button>En savoir plus</button>
+		<button onclick="document.getElementById('cookies').style.display='none'">Accepter</button>
+	</div>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
