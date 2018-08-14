@@ -32,11 +32,13 @@ h2{
     font-size: 30px;
 }
 
+
 h4{
     text-align: center;
     font-size: 40px;
-    font-weight: lighter;
-    padding-bottom: 20px;
+    font-weight: bold;
+    line-height: 48px;
+    padding-bottom: 30px;
 }
 h5{
     text-align: center;
@@ -122,7 +124,7 @@ h5{
     position: absolute;
     top: 5%;
     left: 10%;
-    width: 135px;
+    width: 10%;
 }
 
 
@@ -351,6 +353,28 @@ h5{
     height: 50px;
     width: 50px;
 }
+
+/*
+*       Barre cookies
+*/
+
+#cookies {
+    background:#8bb73e;
+    position: fixed;
+    bottom:0;
+    width:100%;
+}
+#cookies p {
+    display:inline;
+    margin-left: 10px;
+    margin-right:20px;
+    color: #ffffff;
+}
+#cookies button {
+    background: #ffffff;
+    border: 1px solid black;
+    border-radius: 5px;
+}
 /*
 * Fin footer
 */
@@ -433,7 +457,7 @@ h5{
 /*-----------------------------------------------------Page équipe-------------------------------------------*/
 
 .container-equipe{
-    height: 400px;
+    height: 350px;
     display: flex;
     flex-flow: column wrap;
     align-items: center;
@@ -465,8 +489,18 @@ h5{
 
 @media screen and (max-width: 1640px){
     /*
+    *       Attributs globaux
+    */
+
+    .singular .entry-content{
+        width: 100%;
+    }
+
+
+    /*
        *   Barre de navigation
        */
+       
        #access ul{
            margin: 0 -7%;
        }
@@ -535,8 +569,9 @@ h5{
         }
 
         h4{
-            font-size: 20px;
-            font-weight: 700;
+            line-height: 35px;
+            font-size: 30px;
+            padding-bottom: 35px;
         }
         
         /*
@@ -587,7 +622,7 @@ h5{
            width: 28px;
            height: 24px;   
            background: #ffffff;
-           box-shadow: 0px 0px 28px 19px rgba(255,255,255,1);
+           box-shadow: 0px 0px 19px 19px rgba(255,255,255,1);
        }
        #toggle img{
            margin: auto;
@@ -727,17 +762,6 @@ h5{
             border-left: none;
             border-top: #FFFFFF 1px solid;
         }
-
-        /*
-        *       Barre cookies
-        */
-
-        #cookies {
-            background:#8bb73e;
-            position: fixed;
-            bottom:0;
-         }
-         #cookies button {
-            background: #ffffff;
-         }
+ 
+        
    } 

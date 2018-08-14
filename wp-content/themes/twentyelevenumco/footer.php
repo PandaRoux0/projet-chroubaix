@@ -36,7 +36,7 @@
 					<li><a href="<?php echo get_site_url(); ?>/liens-utiles/">Liens utiles</a></li>
 				</ul>
 				<ul id="lien-site">
-					<li><a href="http://www.ch-roubaix.fr/">Site du ch-Roubaix</a></li>
+					<li><a href="http://www.ch-roubaix.fr/">Site du CH Roubaix</a></li>
 					<li><a href="http://www.ch-roubaix.fr/cancerologie/">Site de la cancérologie</a></li>
 					<li><a href="http://ifsi.ch-roubaix.fr/">Site de l'IFSI / l'IFAS</a></li>
 					<li><a href="http://neonatologie.ch-roubaix.fr/">Site de la néonatologie</a></li>
@@ -45,7 +45,7 @@
 	</footer><!-- #colophon -->
 	<div id="cookies">
 		<p>Nous diffusons des cookies afin d'analyser le trafic sur ce site. Les informations concernant l'utilisation que vous faites de notre site nous sont transmises dans cette optique</p>
-		<button>En savoir plus</button>
+		<button onclick="location.href='#'">En savoir plus</button>
 		<button onclick="document.getElementById('cookies').style.display='none'">Accepter</button>
 	</div>
 </div><!-- #page -->
