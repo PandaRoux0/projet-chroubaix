@@ -6,10 +6,10 @@
 $(document).ready(function(){
 
     function no_repeat(number , element){
-        return '#suivie-container > .suivie-description:nth-child('+number+') '+element+''; 
+        return '#suivi-container > .suivi-description:nth-child('+number+') '+element+''; 
     }
 
-    $('.suivie-description > div').hide();
+    $('.suivi-description > div').hide();
     //Initialisation des variables
         $(no_repeat(1,'img')).click(function(){
             $(no_repeat(1,'div')).slideToggle(500);

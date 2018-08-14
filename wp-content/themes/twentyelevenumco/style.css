@@ -98,7 +98,7 @@ h5{
 
 #access ul{
     list-style: none;
-    margin: 0 21%;
+    margin: 0 8%;
     font-size: 14px;
 }
 
@@ -124,7 +124,7 @@ h5{
 #access #logo{
     position: absolute;
     top: 5%;
-    left: 14%;
+    left: 10%;
     width: 135px;
 }
 
@@ -219,7 +219,7 @@ h5{
 
 .container{
     border-top: #D3D3D3 1px solid;
-    margin: 45px 0;
+    margin: 45px auto;
     padding: 20px 0;
 }
 .container h1{
@@ -235,12 +235,13 @@ h5{
 /* Partie : "A qui s'adresse notre programme" */
 
 
-#qui{
+#qui {
     border: none;
+    margin-top: 0;
 }
 
 #qui-container li{
-    list-style-image: url('http://localhost/wordpress/wp-content/themes/twentyelevenumco/img/checked.png');
+    list-style-image: url('http://wordpress.martinwallet.fr/wp-content/themes/twentyelevenumco/img/checked.png');
     padding: 10px 10px;
 }
 
@@ -259,6 +260,12 @@ h5{
     justify-content: space-between;
 }
 
+.suivi-description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+}
 
 .suivi-description img{
     border: none;
@@ -280,10 +287,10 @@ h5{
 }
 
 .suivi-description #suivi-paragraphe{
-    width: 112px;
-    font-size: 10px;
+    width: 180px;
+    font-size: 15px;
     background: #FFFFFF;
-    box-shadow: 0 0 31px -4px rgba(0,0,0,0.50);
+    border: #D3D3D3 1px solid;
     border-radius: 28px;
     padding: 15px;
 
@@ -458,6 +465,7 @@ h5{
 
 /*------------------------------------------------Media Queries------------------------------------------*/
 /* Quand l'écran descend à 1640px de large*/
+
 @media screen and (max-width: 1640px){
     /*
        *   Barre de navigation
@@ -469,14 +477,16 @@ h5{
            left: 4%;
        }
        #toggle img{
-           height: 13px;
-           width: 13px;
+           height: 20px;
+           width: 20px;
        }
    }
    
+
 /*
 *           Partie responsive pour mobile
 */
+
    @media screen and (min-width: 769px) { 
        #toggle {
            display:none;
@@ -517,18 +527,19 @@ h5{
             font-size: 20px;
             font-weight: 700;
         }
+        
         /*
         * Image du header
         */
 
-        #branding #img_header{
-            height: 100%;
-            width: 100%;
-            padding:0;
+        #header_img{
+            
         }
+
         /*
         *  Barre de navigation
         */
+
         #access #logo{   /* Logo du site */
             position: absolute;
             top: 5%;
@@ -539,6 +550,7 @@ h5{
         #barre-mobile{ /* La barre de navigation mobile */
             height: 35px;
             background: #8BB73E;
+            border-bottom: #ffffff 1px solid;
         }
 
         #container-contact{
@@ -589,15 +601,41 @@ h5{
        /*
        *    Titre du site
        */ 
-
+       #titre-container{
+           width: 80%;
+       }
        #site-title{
            line-height: 33px;
            font-size: 28px;
        }
 
        /*
+       *       Page d'acceuil 
+       */
+
+       #qui-container{
+           flex-direction: column-reverse;
+           align-items: center;
+       }
+       #suivi-container{
+           flex-direction: column;
+           align-items: center;
+       }
+       .suivi-description{
+        padding: 20px 0;
+       }
+
+       .charte-list{
+           flex-direction: column;
+       }
+       .charte-list ul{
+           padding: 20px 0;
+       }
+
+       /*
        *       Page article
        */
+
        .container-article h3:nth-child(1){
            font-size: 18px;
        }
@@ -673,7 +711,7 @@ h5{
         }
 
         #site-generator #lien-site{
-            padding: 30px 0;
+            padding: 30px 0 30px 38px;
             border-left: none;
             border-top: #FFFFFF 1px solid;
         }

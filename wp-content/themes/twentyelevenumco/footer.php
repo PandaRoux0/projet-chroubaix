@@ -26,20 +26,20 @@
 			<div id="site-generator">
 				<div id="suivez-nous">
 					<h4>Suivez-nous !</h4>
-						<a href=""><img src="http://localhost/wordpress/wp-includes/images/logo-facebook.png" alt=""></a>
-						<a href=""><img src="http://localhost/wordpress/wp-includes/images/logo-google-plus.png" alt=""></a>
-						<a href=""><img src="http://localhost/wordpress/wp-includes/images/logo-youtube.png" alt=""></a>
+						<a href=""><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-facebook.png" alt=""></a>
+						<a href=""><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-google-plus.png" alt=""></a>
+						<a href=""><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-youtube.png" alt=""></a>
 				</div>
 				<ul id="lien-information">
 					<?php do_action( 'twentyeleven_credits' ); ?>
-					<li><a href="http://localhost/wordpress/mentions-legales/">Mentions légales</a></li>
-					<li><a href="http://localhost/wordpress/liens-utiles/">Liens utiles</a></li>
+					<li><a href="<?php echo get_site_url(); ?>/mentions-legales/">Mentions légales</a></li>
+					<li><a href="<?php echo get_site_url(); ?>/liens-utiles/">Liens utiles</a></li>
 				</ul>
 				<ul id="lien-site">
-					<li><a href="">Site du ch-Roubaix</a></li>
-					<li><a href="">Site de la cancérologie</a></li>
-					<li><a href="">Site de la néonatologie</a></li>
-					<li><a href="">Site de l'IFSI / l'IFAS</a></li>
+					<li><a href="http://www.ch-roubaix.fr/">Site du ch-Roubaix</a></li>
+					<li><a href="http://www.ch-roubaix.fr/cancerologie/">Site de la cancérologie</a></li>
+					<li><a href="http://ifsi.ch-roubaix.fr/">Site de l'IFSI / l'IFAS</a></li>
+					<li><a href="http://neonatologie.ch-roubaix.fr/">Site de la néonatologie</a></li>
 				</ul>
 			</div>
 	</footer><!-- #colophon -->

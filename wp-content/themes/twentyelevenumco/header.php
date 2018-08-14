@@ -107,7 +107,7 @@
 
 		<div id="barre-mobile" style="height:40px;">
 			<div id="toggle">
-					<img src="<?php echo get_stylesheet_directory_uri() ?>/img/icon-navbar.png" alt="Show" />
+					<img src="<?php echo get_stylesheet_directory_uri() ?>/img/icon-navbar-mobile.png" alt="Show" />
 			</div>
 		</div>
 			
