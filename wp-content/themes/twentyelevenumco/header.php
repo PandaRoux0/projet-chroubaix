@@ -82,6 +82,9 @@
 				
 					<div id="popout">
 						<?php wp_nav_menu( array( 'menu_class' => 'nav-menu' ) ); ?>
+						<ul class='nav-menu'>
+							<li id='contact-mobile'><strong>CETRADIMN </br> 26 boulevard Lacordaire</br>59100 Roubaix </br> </br> Tél: 03.20.99.30.40</strong> </li>
+						</ul>
 					</div>
 					<div id="barre-principale">
 						<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
@@ -104,9 +107,9 @@
 		<div id="titre-container">
 			<h1 id="site-title" class="entry-title"><?php bloginfo('name')?></h1>
 		</div>
-		<div id="barre-tablette" style="height: 40px;"></div>
 		<div id="toggle">
-					<img src="<?php echo get_stylesheet_directory_uri() ?>/img/icon-navbar-mobile.png" alt="Show" />
+			<p>Menu</p>
+			<img src="<?php echo get_stylesheet_directory_uri() ?>/img/icon-navbar-mobile.png" alt="Show" />
 		</div>
 			
 				<!--Fin titre principal-->

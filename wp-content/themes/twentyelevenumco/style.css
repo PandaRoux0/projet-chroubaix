@@ -22,14 +22,14 @@ p{
 
 h2{
     text-align: center;
-    font-size: 50px;
+    font-size: 42px;
     font-weight: bold;
     border-bottom: #D3D3D3 1px solid;
     color: #8BB73E !important;
 }
 
 .entry-content h3{
-    font-size: 30px;
+    font-size: 26px;
 }
 
 
@@ -57,12 +57,18 @@ h5{
     width: 80%;
 }
 
+.singular.page .hentry { /* Enlève l'espace au dessus de "A qui s'adresse ce programme ?" */
+    padding: 0;
+}
+.singular .hentry{   /* Enlève l'espace au dessus de "A qui s'adresse ce programme ?" */
+    padding: 0;
+}
 
 
 /*---------------------------------------------Header-------------------------------------------------------------*/
 
 /*
-*  Header global
+*       Header global
 */
 
 #branding{
@@ -80,11 +86,65 @@ h5{
 
 
 /*
-*Menu barre de navigation
+*     Menu barre de navigation
 */
-#popout{
-    display: none;
+#popout {    /* contient le menu mobile et tablette */
+    position: fixed;
+    height: 100%;
+    width: 300px;
+    background: rgba(139, 183, 62, .9);
+    color: white;
+    top: 0;
+    left: -17%;
+    overflow:auto;
 }
+
+#toggle { /* Icon pour la barre de navigation mobile et tablette */
+    display: flex;
+    float: right;
+    position: fixed;
+    top: 10px;
+    right: 44px;
+    width: 28px;
+    height: 24px;   
+    background: #ffffff;
+    box-shadow: 0px 0px 19px 19px rgba(255,255,255,1);
+}
+
+#toggle img{
+    margin: auto;
+}
+#toggle p{
+    color: #000000;
+    padding-right: 10px;
+}
+
+.nav-menu li { /* menu monile et tablette*/
+    border-bottom:1px solid #eee; 
+    padding:20px;
+    width:100%;
+}
+
+.nav-menu li:hover { 
+    color: #000000;
+}
+
+.nav-menu li a { 
+    color:#FFF;
+    text-decoration:none;
+    width:100%;
+}
+
+.nav-menu #contact-mobile{
+    padding-left: 77px;
+    font-size: 14px;
+    border-bottom: none;
+}
+
+.nav-menu #contact-mobile:hover{
+    color: #FFFFFF;
+}
+
 
 #access{
     position: fixed;
@@ -124,7 +184,7 @@ h5{
     position: absolute;
     top: 5%;
     left: 10%;
-    width: 10%;
+    width: 135px;
 }
 
 
@@ -268,7 +328,6 @@ h5{
 
 .suivi-description img{
     border: none;
-    border-radius: 100px;
     display: flex;
     margin: 0 auto;
     opacity: 1;
@@ -363,12 +422,12 @@ h5{
     position: fixed;
     bottom:0;
     width:100%;
+    padding: 5px 15px;
 }
 #cookies p {
-    display:inline;
-    margin-left: 10px;
-    margin-right:20px;
+    display:inline-block;
     color: #ffffff;
+    width: 95%;
 }
 #cookies button {
     background: #ffffff;
@@ -393,7 +452,7 @@ h5{
 
 .container-article h3:nth-child(1){
     width: 100%;
-    font-size: 30px;
+    font-size: 26px;
     order: 1;
 }
 .container-article img:nth-child(2){
@@ -420,7 +479,7 @@ h5{
 
 .container-article-inverse h3:nth-child(1){
     width: 100%;
-    font-size: 30px;
+    font-size: 26px;
     order: 3;
 }
 .container-article-inverse img:nth-child(2){
@@ -461,12 +520,12 @@ h5{
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-    align-content: space-around;
     border-bottom: #D3D3D3 1px solid;
 }
 
 .container-equipe img{
-    border-radius: 180px;
+    border-radius: 5px;
+    margin-top: 35px;
 }
 
 .container-equipe p{
@@ -485,7 +544,7 @@ h5{
 
 
 /*---------------------------------------------------------------------         Media Queries       --------------------------------------------------------------------------------*/
-/* Quand l'écran descend à 1640px de large*/
+/* Ajustement en dessous de 1640 px de large */
 
 @media screen and (max-width: 1640px){
     /*
@@ -513,27 +572,76 @@ h5{
        }
    }
    
-/*
-*           Partie responsive pour tablette 
-*/
+/*--------------------------------------------------------Partie responsive pour tablette-----------------------------------------------------*/
 
 @media screen and (max-width: 1284px) and (min-width: 770px){
 
-    .menu-menu-1-container{
+    /*
+    *       Barre de navigation
+    */
+    #access #logo{   /* Logo du site */
         display: none;
     }
-    #barre-tablette{
-        background: #8BB73E;
+
+    #container-contact{
+        display: none;
+    }
+
+    #barre-principale{
+        display: none;
+    }
+
+    #popout{
+        width: 320px;
+        left: -14%;
+    }
+    
+    /*
+    *           Page  présentation"
+    */
+
+    #qui-container img{
+        width: 40vw;
+        height: 100%;
+    }
+
+    /*
+    *           Page "article"
+    */
+
+    .container-article img:nth-child(2){
+        width: 40vw;
+        height: 100%;
+    }
+
+    .container-article-inverse img:nth-child(2){
+        width: 40vw;
+        height: 100%;
+    }
+
+    /*
+    *           Titre principal
+    */
+
+    #site-title{
+        font-size: 52px;
+    }
+    #titre-container{
+        width: 62%;
     }
 }
 
-/*
-*           Partie responsive pour mobile
-*/
+/*-------------------------------------------------------------Partie responsive pour mobile-------------------------------------------------*/
 
-   @media screen and (min-width: 769px) { 
+   @media screen and (min-width: 1285px) { 
        #toggle {
-           display:none;
+           display: none;
+       }
+       #popout{
+           display: none;
+       }
+       .nav-menu {
+           display: none;
        }
     
    } 
@@ -554,7 +662,7 @@ h5{
         */
 
         .entry-content h2{
-            font-size: 27px;
+            font-size: 20px;
             margin-bottom: 80px;
         }
 
@@ -578,10 +686,6 @@ h5{
         * Image du header
         */
 
-        #header_img{
-            
-        }
-
         /*
         *  Barre de navigation
         */
@@ -597,52 +701,6 @@ h5{
        #barre-principale{
            display: none;
        }
-       #barre-tablette{
-           display: none;
-       }
-
-       #popout {    /* contient le menu mobile */
-           position: fixed;
-           height: 100%;
-           width: 250px;
-           background: rgba(139, 183, 62, .9);
-           color: white;
-           top: 0;
-           left: -17%;
-           overflow:auto;
-       }
-    
-    
-       #toggle { /* Icon pour la barre de navigation mobile */
-           display: flex;
-           float: right;
-           position: fixed;
-           top: 10px;
-           right: 5px;
-           width: 28px;
-           height: 24px;   
-           background: #ffffff;
-           box-shadow: 0px 0px 19px 19px rgba(255,255,255,1);
-       }
-       #toggle img{
-           margin: auto;
-       }
-    
-       .nav-menu li { 
-        border-bottom:1px solid #eee; 
-           padding:20px;
-           width:100%;
-       }
-    
-       .nav-menu li:hover { 
-           color: #000000;
-       }
-    
-       .nav-menu li a { 
-           color:#FFF;
-           text-decoration:none;
-           width:100%;
-       }
    
        /*
        *    Titre du site
@@ -653,7 +711,7 @@ h5{
        }
        #site-title{
            line-height: 33px;
-           font-size: 28px;
+           font-size: 33px;
        }
 
        /*
@@ -684,18 +742,19 @@ h5{
        */
 
        .container-article h3:nth-child(1){
-           font-size: 18px;
+           font-size: 14px;
        }
        .container-article p:nth-child(3){
            width: 100%;
        }
        .container-article img:nth-child(2){
             margin: 25px 0;
+            align-self: flex-end;
         }
 
 
         .container-article-inverse h3:nth-child(1){
-            font-size: 18px;
+            font-size: 14px;
         }
        .container-article-inverse p:nth-child(3){
              width: 100%;
@@ -763,5 +822,9 @@ h5{
             border-top: #FFFFFF 1px solid;
         }
  
+        /*
+        *       Barre cookies
+        */
+
         
    } 

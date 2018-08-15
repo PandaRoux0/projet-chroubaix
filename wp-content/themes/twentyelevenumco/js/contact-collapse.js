@@ -12,24 +12,11 @@ $(document).ready(function(){
     $(".contact p").hide();
     //Lorsque l'on clique , il s'affiche ou se cache
     $(".contact #icon-adresse").click(function(){
-        $adresse.show(500);
+        $adresse.toggle(500);
     });
 
     $(".contact #icon-telephone").click(function(){
-        $phone.show(500);
+        $phone.toggle(500);
     });
-    //Cette fonction permet de cacher l'élément lorsque l'on clique à n'importe quel endroit
-    $(document).mouseup(function (e) {
-        if (!$phone.is(e.target) && $phone.has(e.target).length === 0) 
-        {
-          $phone.hide(500);
-
-        }
-
-         if (!$adresse.is(e.target) && $adresse.has(e.target).length === 0)
-        {
-           $adresse.hide(500);
-        }
-      });
 
 });

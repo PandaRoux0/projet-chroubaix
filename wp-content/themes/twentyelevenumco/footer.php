@@ -43,11 +43,14 @@
 				</ul>
 			</div>
 	</footer><!-- #colophon -->
-	<div id="cookies">
-		<p>Nous diffusons des cookies afin d'analyser le trafic sur ce site. Les informations concernant l'utilisation que vous faites de notre site nous sont transmises dans cette optique</p>
-		<button onclick="location.href='#'">En savoir plus</button>
-		<button onclick="document.getElementById('cookies').style.display='none'">Accepter</button>
-	</div>
+	<?php if(empty($_COOKIE['allow_cookie']) || $_COOKIE['allow_cookie']!=true) { ?>
+		<div id="cookies">
+			<p>En poursuivant votre navigation sur ce site, vous acceptez l’utilisation de cookies pour permettre des analyses statistiques. Cliquez sur "Plus d'informations" pour en savoir plus et modifier vos paramètres.</p>
+			<button onclick="location.href='http://wordpress.martinwallet.fr/utilisation-des-cookies/'">En savoir plus</button>
+			<button onclick="document.getElementById('cookies').style.display='none'; document.cookie='allow_cookie=true;'">Accepter</button>
+		</div>
+	<?php } ?>
+
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
