@@ -98,4 +98,13 @@ function wpm_new_image(){
     add_image_size('taille-icon', 130, 130);
 }
 add_action( 'after_setup_theme', 'wpm_new_image');
+
+
+
+add_theme_support( 'custom-header', array( 
+	'header_image' => '', 
+	'header-selector' => '#header_img', 
+	'header-text' => false, 
+	'height' => 600, 
+	'width' => 1920 ));
 ?>

@@ -67,10 +67,9 @@
 ?>
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://github.com/scrollreveal/scrollreveal.git"></script>
-<script src="<?php echo get_stylesheet_directory_uri() ?>/js/contact-collapse.js" type="text/javascript"></script>
-<script src="<?php echo get_stylesheet_directory_uri() ?>/js/description-collapse.js" type="text/javascript"></script>
-<script src="<?php echo get_stylesheet_directory_uri() ?>/js/mobile-navbar-collapse.js" type="text/javascript"></script>
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/contact-collapse.js" type="text/javascript"></script>
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/description-collapse.js" type="text/javascript"></script>
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/mobile-navbar-collapse.js" type="text/javascript"></script>
 </head>
 
 <body <?php body_class(); ?>>
@@ -84,7 +83,7 @@
 					<div id="popout">
 						<?php wp_nav_menu( array( 'menu_class' => 'nav-menu' ) ); ?>
 						<ul class='nav-menu'>
-							<li id='contact-mobile'><strong>CETRADIMN </br> 26 boulevard Lacordaire</br>59100 Roubaix </br> </br> Tél: 03.20.99.30.40</strong> </li>
+							<li id='contact-mobile'><strong>Adresse : </strong> </br> CETRADIMN </br> 26 boulevard Lacordaire</br>59100 Roubaix </br> </br><strong>Téléphone : </strong></br> 03.20.99.30.40</li>
 						</ul>
 					</div>
 					<div id="barre-principale">
