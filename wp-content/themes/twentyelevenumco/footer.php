@@ -26,20 +26,26 @@
 			<div id="site-generator">
 				<div id="suivez-nous">
 					<h4>Suivez-nous !</h4>
-						<a href=""><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-facebook.png" alt=""></a>
-						<a href=""><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-google-plus.png" alt=""></a>
-						<a href=""><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-youtube.png" alt=""></a>
+						<a href="https://www.facebook.com/Centre-Hospitalier-de-Roubaix-Page-Officielle-295426447159694/" target="_blank" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-facebook.png" alt=""></a>
+						<a href="" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-google-plus.png" alt=""></a>
+						<a href="https://www.youtube.com/user/CHdeRoubaix" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-youtube.png" alt=""></a>
 				</div>
-				<ul id="lien-information">
-					<?php do_action( 'twentyeleven_credits' ); ?>
-					<li><a href="<?php echo get_site_url(); ?>/mentions-legales/">Mentions légales</a></li>
-					<li><a href="<?php echo get_site_url(); ?>/liens-utiles/">Liens utiles</a></li>
-				</ul>
+				<div id="info-importante">
+					<ul>
+						<li><strong>Adresse : </strong></br> CETRADIMN  26 boulevard Lacordaire, 59100 Roubaix</li>
+						<li><strong>Téléphone : </strong></br> 03.20.99.30.40</li>
+					</ul>
+					<ul>
+						<?php do_action( 'twentyeleven_credits' ); ?>
+						<li><a href="<?php echo get_site_url(); ?>/mentions-legales/">Mentions légales</a></li>
+						<li><a href="<?php echo get_site_url(); ?>/liens-utiles/">Liens utiles</a></li>
+					</ul>
+				</div>
 				<ul id="lien-site">
-					<li><a href="http://www.ch-roubaix.fr/">Site du CH Roubaix</a></li>
-					<li><a href="http://www.ch-roubaix.fr/cancerologie/">Site de la cancérologie</a></li>
-					<li><a href="http://ifsi.ch-roubaix.fr/">Site de l'IFSI / l'IFAS</a></li>
-					<li><a href="http://neonatologie.ch-roubaix.fr/">Site de la néonatologie</a></li>
+					<li><a href="http://www.ch-roubaix.fr/" target="_blank">Site du CH Roubaix</a></li>
+					<li><a href="http://www.ch-roubaix.fr/cancerologie/" target="_blank">Site de la cancérologie</a></li>
+					<li><a href="http://ifsi.ch-roubaix.fr/" target="_blank">Site de l'IFSI / l'IFAS</a></li>
+					<li><a href="http://neonatologie.ch-roubaix.fr/" target="_blank">Site de la néonatologie</a></li>
 				</ul>
 			</div>
 	</footer><!-- #colophon -->
@@ -54,6 +60,10 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
+
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/flexie.js"></script>
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/viewport-units-buggyfill.js"></script>
+<script>window.viewportUnitsBuggyfill.init();</script>
 
 </body>
 </html>

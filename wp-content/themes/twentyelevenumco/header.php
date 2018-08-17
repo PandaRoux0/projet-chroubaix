@@ -67,7 +67,6 @@
 ?>
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/contact-collapse.js" type="text/javascript"></script>
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/description-collapse.js" type="text/javascript"></script>
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/mobile-navbar-collapse.js" type="text/javascript"></script>
 </head>
@@ -82,25 +81,10 @@
 				
 					<div id="popout">
 						<?php wp_nav_menu( array( 'menu_class' => 'nav-menu' ) ); ?>
-						<ul class='nav-menu'>
-							<li id='contact-mobile'><strong>Adresse : </strong> </br> CETRADIMN </br> 26 boulevard Lacordaire</br>59100 Roubaix </br> </br><strong>Téléphone : </strong></br> 03.20.99.30.40</li>
-						</ul>
 					</div>
 					<div id="barre-principale">
 						<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 					</div>
-
-				<!--Partie coordonnées de l'hopital-->
-				<div id="container-contact">
-					<div class="contact">
-							<img id="icon-telephone" src="<?php echo get_stylesheet_directory_uri() ?>/img/logo-phone.png"/>
-							<p id="text-telephone">Tél: 03.20.99.30.40</p>
-					</div>
-					<div class="contact">
-							<img id="icon-adresse" src="<?php echo get_stylesheet_directory_uri() ?>/img/logo-position.png"/>
-							<p id="text-adresse">CETRADIMN</br> 26 boulevard Lacordaire, 59100 Roubaix</p>	
-					</div>
-				</div>	
 					
 	</nav><!-- #access -->
 		<!--Titre principal-->

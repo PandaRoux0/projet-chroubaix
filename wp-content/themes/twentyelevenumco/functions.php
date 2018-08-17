@@ -8,28 +8,7 @@ function theme_enqueue_styles() {
 }
 
 
-add_action('widgets_init', 'twentyelevenumco_widgets_init');
-function twentyelevenumco_widgets_init(){
-
-    register_sidebar( array(
-		'name' => __( 'Main Sidebar', 'twentyeleven' ),
-		'id' => 'sidebar-1',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => "</aside>",
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-    ) );
-    
-    register_sidebar( array(
-		'name' => __( 'Zone de widget', 'twentyeleven' ),
-		'id' => 'zone-article',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => "</aside>",
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	) );
-}
-
+//Ajouter du bouton "Formats" dans le back-office
 function add_style_select_buttons( $buttons ) {
     array_unshift( $buttons, 'styleselect' );
     return $buttons;
@@ -40,7 +19,7 @@ add_filter( 'mce_buttons_2', 'add_style_select_buttons' );
 function my_custom_styles( $init_array ) {  
  
     $style_formats = array(  
-        // These are the custom styles
+        // Permet d'ajouter des classes CSS directement dans le back-office
         array(  
             'title' => 'Conteneur "article"',  
             'block' => 'div',  
